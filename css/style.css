@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-*, :root{
+*, :root {
     font-family: 'Inter', sans-serif;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -9,30 +9,139 @@
     -webkit-text-size-adjust: 100%;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body{
+body {
     background-color: #090912;
 }
 
-main{
+main {
     max-width: 640px;
     margin: 0 auto 64px;
     padding: 20px;
 }
 
 
-h1{
-    color: white;
+
+header {
+    margin-top: 64px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #334155;
+    
+}
+
+header h1 {
+    margin-top: 24px;
+
+    font-size: 30px;
     font-weight: 700;
+
+    color: #F1F5F9;
 }
 
-#quiz{
-    color: white;
+#quiz {
+    counter-reset: quiz-item;
 }
 
+#quiz-item {
+    margin-top: 24px;
 
-#acertos{
+    border: 1px solid #475569;
+    border-radius: 6px;
+
+    overflow: hidden;
+}
+
+#quiz-item h3 {
+    padding: 16px 20px;
+    
+    color: #E2E8F0;
+    
+    display: flex;
+    align-items: center;
+    
+    gap: 12px;
+
+    background-color: #1E293B;
+    
+}
+
+#quiz-item h3::before {
+    counter-increment: quiz-item;
+    content: counter(quiz-item);
+    
+    background-color: #475569;
+
+    width: 28px;
+    height: 28px;
+    
+    font-size: 12px;
+    border-radius: 50%;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+}
+
+#quiz-item dl {
+    padding: 20px 24px;
+
+    display: grid;
+    gap: 8px;
+}
+
+#quiz-item dl dt {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #E2E8F0;
+}
+
+#quiz-item input{
+    all: unset;
+
+    border: 1px solid #94A3B8;
+    border-radius: 50%;
+
+    width: 16px;
+    height: 16px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+}
+
+#quiz-item input:checked{
+    border: 1px solid #A3E635;
+
+
+}
+
+#quiz-item input:checked::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #A3E635;
+
+    border-radius: 50%;
+
+
+}
+#acertos {
     text-align: center;
     color:black;
     background-color: #A3E635;

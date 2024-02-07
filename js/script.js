@@ -9,7 +9,7 @@ const perguntas = [
     correta: 1,
   },
   {
-    pergunta: "Como declarar uma variável constante em JavaScript?",
+    pergunta: "Como declarar uma constante em JavaScript?",
     respostas: [
       "var nomeDaVariavel = valor;",
       "let nomeDaVariavel = valor;",
